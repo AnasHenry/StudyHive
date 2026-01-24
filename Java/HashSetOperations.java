@@ -31,5 +31,30 @@ class Hset{
 
         //EMPTYING SET
         set.clear();
+
+        //HASHSET -> ARRAYLIST
+        ArrayList<Integer> list = new ArrayList<>(set);
+
+        //SET OPERATIONS
+        //UNION
+        HashSet<Integer> a = new HashSet<>();
+        a.add(1); a.add(2);
+
+        HashSet<Integer> b = new HashSet<>();
+        b.add(2); b.add(3);
+
+        HashSet<Integer> union = new HashSet<>(a);
+        union.addAll(b); // [1,2,3]
+
+        //INTERSECTION
+        HashSet<Integer> intersection = new HashSet<>(a);
+        intersection.retainAll(b); // [2]
+
+        //SET DIFFERENCE
+        HashSet<Integer> difference = new HashSet<>(a);
+        difference.removeAll(b); // [1]
+
+        //COMPARING SETS
+        System.out.println(a.equals(b)); // true if same elements
     }
 }
