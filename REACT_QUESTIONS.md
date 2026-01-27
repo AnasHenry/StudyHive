@@ -240,7 +240,55 @@ Moving shared state to the closest common parent to synchronize child components
   
 ---
 
-### Q28. 
+### Q28. What is JSX?
+**Answer:**
+JSX stands for JavaScript XML. It allows us to write HTML inside JavaScript and place them in the DOM without using functions like appendChild( ) or createElement( ).
+
+As stated in the official docs of React, JSX provides syntactic sugar for React.createElement( ) function.
+
+> Note- We can create react applications without using JSX as well.
+
+Without using JSX, we would have to create an element by the following process:
+```jsx
+const text = React.createElement('p', {}, 'This is a text');
+const container = React.createElement('div','{}',text );
+ReactDOM.render(container,rootElement);
+```
+
+Using JSX,
+```jsx
+const container = (
+<div>
+  <p>This is a text</p>
+</div>
+);
+ReactDOM.render(container,rootElement);
+```
+
+---
+
+### Q29. What are the differences between functional and class components?
+**Answer:**
+| Feature       | Functional Component | Class Component   |
+| ------------- | -------------------- | ----------------- |
+| Syntax        | JavaScript function  | ES6 class         |
+| State         | useState Hook        | this.state        |
+| Lifecycle     | useEffect            | Lifecycle methods |
+| this keyword  | Not used             | Required          |
+| Boilerplate   | Minimal              | More verbose      |
+| Performance   | Slightly better      | Slightly heavier  |
+| Reusability   | Easier with Hooks    | Harder            |
+| Readability   | Cleaner              | More complex      |
+| Current Usage | Preferred            | Legacy            |
+
+---
+
+### Q30. Document Object Model.
+**Answer:**
+![DOM.](https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/002/334/original/virtual_DOM.png?1640091398)
+
+---
+
 
 
 
