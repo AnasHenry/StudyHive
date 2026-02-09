@@ -14,11 +14,21 @@ It is platform independent because Java code is compiled into bytecode, which ru
 
 ### What is the difference between JDK, JRE, and JVM?
 **Answer:**
-- JVM (Java Virtual Machine): Executes Java bytecode.
-- JRE (Java Runtime Environment): Provides libraries + JVM to run Java apps.
-- JDK (Java Development Kit): Full package containing JRE + development tools like compiler (javac).
+- JVM: JVM also known as Java Virtual Machine is a part of JRE. JVM is a type of interpreter responsible for converting bytecode into machine-readable code. JVM itself is platform dependent but it interprets the bytecode which is the platform-independent reason why Java is platform-independent.
+- JRE: JRE stands for Java Runtime Environment, it is an installation package that provides an environment to run the Java program or application on any machine.
+- JDK: JDK stands for Java Development Kit which provides the environment to develop and execute Java programs. JDK is a package that includes two things Development Tools to provide an environment to develop your Java programs and, JRE to execute Java programs or applications.
 
 ---
+
+### What is JIT?
+**Answer:**
+JIT stands for (Just-in-Time) compiler is a part of JRE(Java Runtime Environment), it is used for better performance of the Java applications during run-time.
+![DOM.](https://media.geeksforgeeks.org/wp-content/uploads/20251210112355073106/JIT-768.png)
+- Source code is compiled with javac to form bytecode
+- Bytecode is further passed on to JVM 
+- JIT is a part of JVM, JIT is responsible for compiling bytecode into native machine code at run time.
+- The JIT compiler is enabled throughout, while it gets activated when a method is invoked. For a compiled method, the JVM directly calls the compiled code, instead of interpreting it.
+- As JVM calls the compiled code that increases the performance and speed of the execution.
 
 ### What are the main features of Java?
 **Answer:**
@@ -160,6 +170,50 @@ An interface is a blueprint of a class containing abstract methods that must be 
 | Single inheritance                        | Multiple inheritance |
 
 ---
+
+### What are the Memory storages available in JVM?
+**Answer:**
+![DOM.](https://media.geeksforgeeks.org/wp-content/uploads/20240402092041/JVM-Areas-768.png)
+JVM consists of a few memory storages as mentioned below:
+
+- Class(Method) Area: stores class-level data of every class such as the runtime constant pool, field, and method data, and the code for methods.
+- Heap: Objects are created or objects are stored. It is used to allocate memory to objects during run time.
+- Stack: stores data and partial results which will be needed while returning value for method and performing dynamic linking
+- Program Counter Register: stores the address of the Java virtual machine instruction currently being executed.
+- Native Method Stack: stores all the native methods used in the application.
+
+---
+
+### What is a class Loader?
+**Answer:**
+A class Loader is a part of JVM which is responsible for loading Java classes into memory at runtime.
+Key Responsibilities of Class Loader:
+- Loading: Reads class bytecode (.class file) from disk, network, or other sources.
+- inking: Verifies bytecode (security check) and Prepares static fields
+- Initialization: Executes static blocks and Initializes static variables
+
+---
+
+### What are Packages in Java? Why are they used?
+**Answer:**
+Packages in Java can be defined as the grouping of related types of classes, interfaces, etc providing access to protection and namespace management.
+
+Packages are used in Java in order to prevent naming conflicts, control access, and make searching/locating and usage of classes, interfaces, etc easier.
+
+Types:
+- User-defined packages
+- Built-in packages
+
+
+---
+
+### What are the advantages of Packages in Java?
+**Answer:**
+- Packages avoid name clashes.
+- The Package provides easier access control.
+- We can also have the hidden classes that are not visible outside and are used by the package.
+- It is easier to locate the related classes.
+
 
 ## 🟨 Flash Card Questions (Memorizers)
 
