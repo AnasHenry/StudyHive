@@ -4,7 +4,7 @@
 
 ## Core Java Questions
 
-### Q1. What is Java? Why is it platform independent?
+### What is Java? Why is it platform independent?
 **Answer:**
 Java is a high-level, object-oriented programming language designed to be portable, secure, and robust.
 
@@ -12,7 +12,7 @@ It is platform independent because Java code is compiled into bytecode, which ru
 
 ---
 
-### Q2. What is the difference between JDK, JRE, and JVM?
+### What is the difference between JDK, JRE, and JVM?
 **Answer:**
 - JVM (Java Virtual Machine): Executes Java bytecode.
 - JRE (Java Runtime Environment): Provides libraries + JVM to run Java apps.
@@ -20,7 +20,7 @@ It is platform independent because Java code is compiled into bytecode, which ru
 
 ---
 
-### Q3. What are the main features of Java?
+### What are the main features of Java?
 **Answer:**
 - Object-Oriented
 - Platform Independent
@@ -32,7 +32,7 @@ It is platform independent because Java code is compiled into bytecode, which ru
   
 ---
 
-### Q4. What is OOP? Name its four pillars.
+### What is OOP? Name its four pillars.
 **Answer:**
 OOP organizes code into objects that contain data and behavior.
 Four pillars:
@@ -43,13 +43,13 @@ Four pillars:
 
 ---
 
-### Q5. What is Encapsulation?
+### What is Encapsulation?
 **Answer:**
 Encapsulation is wrapping data and methods together into a single unit and restricting direct access using private variables with public getters/setters.
 
 ---
 
-### Q6. Difference between Abstraction and Encapsulation?
+### Difference between Abstraction and Encapsulation?
 **Answer:**
 | Abstraction                                  |          Encapsulation           |
 | -------------------------------------------- | :------------------------------: |
@@ -59,7 +59,7 @@ Encapsulation is wrapping data and methods together into a single unit and restr
 
 ---
 
-### Q7. What is Polymorphism?
+### What is Polymorphism?
 **Answer:**
 Polymorphism means one interface, multiple implementations.
 Types:
@@ -131,7 +131,7 @@ public class Main {
 ```
 ---
 
-### Q8. Method Overloading vs Overriding
+### Method Overloading vs Overriding
 **Answer:**
 | Feature     | Compile-Time Polymorphism       | Run-Time Polymorphism       |
 | ----------- | ------------------------------- | --------------------------- |
@@ -144,14 +144,14 @@ public class Main {
 
 ---
 
-### Q9. What is an Interface?
+### What is an Interface?
 **Answer:**
 An interface is a blueprint of a class containing abstract methods that must be implemented.
 >  Interfaces can have default and static methods.
 
 ---
 
-### Q10. Abstract Class vs Interface
+### Abstract Class vs Interface
 **Answer:**
 | Abstract Class                            | Interface            |
 | ----------------------------------------- | -------------------- |
@@ -163,13 +163,13 @@ An interface is a blueprint of a class containing abstract methods that must be 
 
 ## 🟨 Flash Card Questions (Memorizers)
 
-### Q11. Why is Java not 100% Object-Oriented?
+### Why is Java not 100% Object-Oriented?
 **Answer:**
 Because it uses primitive data types like int, char, double which are not objects.
 
 ---
 
-### Q12. What is the static keyword?
+### What is the static keyword?
 **Answer:**
 static means the member belongs to the class, not the object.
 - Static variables → shared memory
@@ -178,7 +178,7 @@ static means the member belongs to the class, not the object.
 
 ---
 
-### Q13. What is a Constructor?
+### What is a Constructor?
 **Answer:**
 A constructor is a special method used to initialize objects.
 
@@ -193,14 +193,14 @@ Types:
   
 ---
 
-### Q14. What is Garbage Collection?
+### What is Garbage Collection?
 **Answer:**
 Garbage Collection automatically removes unused objects from memory, preventing leaks.
 > “Java handles memory automatically — developers don’t free memory manually.”
 
 ---
 
-### Q15. What is Exception Handling?
+### What is Exception Handling?
 **Answer:**
 Exception handling prevents program crashes by managing runtime errors.
 ```java
@@ -222,7 +222,7 @@ public class Test {
 
 --- 
 
-### Q16. Checked vs Unchecked
+### Checked vs Unchecked
 **Answer:**
 Checked Exception:
 
@@ -258,15 +258,16 @@ class Test {
     }
 }
 ```
+---
 
 ## A step above of fresher.
 
-### Q17. What is Multithreading?
+### What is Multithreading?
 **Answer:**
 Running multiple threads simultaneously to improve CPU utilization.
 > Downloading + Playing video at the same time.
 
-### Q18. String vs StringBuilder vs StringBuffer.
+### String vs StringBuilder vs StringBuffer.
 **Answer:**
 | String                 | StringBuilder | StringBuffer |
 | ---------------------- | ------------- | ------------ |
@@ -275,14 +276,14 @@ Running multiple threads simultaneously to improve CPU utilization.
 
 ---
 
-### Q19. What is the difference between == and .equals()?
+### What is the difference between == and .equals()?
 **Answer:**
 - == -> compares memory addresses
 - .equals() -> compares values
 
 ---
 
-### Q20. What is Collection Framework?
+### What is Collection Framework?
 **Answer:**
 A set of classes and interfaces used to store and manipulate groups of data.
 - ArrayList
@@ -292,7 +293,7 @@ A set of classes and interfaces used to store and manipulate groups of data.
 
 ---
 
-### Q21. Array vs ArrayList.
+### Array vs ArrayList.
 **Answer:**
 | Array             | ArrayList       |
 | ----------------- | --------------- |
