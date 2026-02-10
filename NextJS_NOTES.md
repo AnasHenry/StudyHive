@@ -101,10 +101,70 @@ export default async function Docs({ params }: { params: Promise<{ slug: string[
 }
 ``` 
 However for this kind of structure, the output for /docs will be a error (404 Not found).\
-![DOM](./assets/asset1.PNG)
+![DOM](./assets/asset1.PNG)\
 In order to handle that and display something instead of the *404 error* message, We can wrap the slug with an another square brackets ( [[..slug]] ). Thus the message in * gets printed in case if /docs is accessed.
 
 However this practice must be followed only at times where the UI is same for all the pages under /docs. If not creating a separate page.tsx under docs folder is recommended.
 
 ---
+
+### Not found Error custom message
+**Answer:**
+Create a file as app/not-found.tsx and edit its content to overwrite the contents of the not found error.
+
+The notFound error can be explicitly thrown from any file and specific not-found exception handling can be done in the same page itself.\
+Example:
+
+```tsx
+import { notFound } from "next/navigation";
+
+export default async function({
+    params,
+}: {params : Promise<{productId: string; reviewId: string}>}){
+    const {productId, reviewId} = await params;
+    if(parseInt(reviewId) > 1000){
+        notFound();
+    }
+    return <h1>This is review number: {reviewId} for product :{productId}</h1>
+}
+```
+
+And if this specific not-found can be captured by having a not-found.tsx file in the same folder.
+> The notFound component does not accepts any props.
+
+Since it doesn't accept props for detailed error handling. One can use the usePathName function under next/navigation and extract the parameters from the path.
+
+> 'usePathName' can only be used in client-side, so it advised to add "use client" on the top of the file.
+
+---
+
+### Private Folders
+**Answer:**
+- A way to tell Next.js not to include it in the routing system.
+- The folder and all its subfolders are excluded from routing.
+- Add an underscore at the start of the folder name.
+  
+---
+
+### Benefits of using Private Folders
+- Keeping your UI logic separate from routing logic.
+- Having a consistent way to organize internal files in your project.
+- Making it easier to group related files in your code editor.
+- Avoiding potential naming conflicts with future Next.js file naming conventions.
+
+> If you actually want an underscore in your URL , use "%5F" instead. That's just
+the URL-encoded version of an underscore.
+
+---
+
+### Route Groups
+Lets one to logically organize the routes and project files without impacting the URL structure.\
+![DOM](./assets/asset2.PNG)
+
+---
+
+
+
+
+
 
