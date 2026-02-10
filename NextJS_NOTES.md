@@ -159,8 +159,17 @@ the URL-encoded version of an underscore.
 
 ### Route Groups
 Lets one to logically organize the routes and project files without impacting the URL structure.\
-![DOM](./assets/asset2.PNG)
+![DOM](./assets/asset2.PNG)\
+for the above mentioned way of structuring we need to access the pages by /auth/login.
+But if the route group is wrapped in () i.e (auth) then we can access by just specifying them only /login as () treats the folder as a organization tool only.
 
+---
+
+### Layouts
+- Layouts are specific UI that can be used anywhere in your project. Example: **Header and Footer**.
+- In order to create a Layout default export a react component as layout.js or layout.tsx file.
+- That component takes a children prop, which Next.js will populate with your page content.
+  
 ---
 
 
