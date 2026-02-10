@@ -214,6 +214,38 @@ Types:
 - We can also have the hidden classes that are not visible outside and are used by the package.
 - It is easier to locate the related classes.
 
+---
+
+### What is Java String Pool?
+**Answer:**
+A Java String Pool is a place in heap memory where all the strings defined in the program are stored. A separate place in a stack is there where the variable storing the string is stored. Whenever we create a new string object, JVM checks for the presence of the object in the String pool, If String is available in the pool, the same object reference is shared with the variable, else a new object is created.
+
+---
+
+### Why do we need wrapper classes?
+**Answer:**
+The wrapper class is an object class that encapsulates the primitive data types, and we need them for the following reasons:
+- Wrapper classes are final and immutable
+- Provides methods like valueOf(), parseInt(), etc.
+- It provides the feature of autoboxing and unboxing.
+  
+---
+
+### What is autoboxing and unboxing?
+**Answer:**
+- Autoboxing: It is the automatic conversion of primitive type to its corresponding wrapper class object
+```java
+int num = 10;
+Integer boxedNum = num; // Autoboxing happens here
+``` 
+- Unboxing: Autoboxing and unboxing reduce boilerplate code. Can happen implicitly in expressions, assignments, and method calls.
+```java
+List<Integer> numbers = new ArrayList<>();
+numbers.add(5);      // Autoboxing: int → Integer
+int n = numbers.get(0); // Unboxing: Integer → int
+```
+
+---
 
 ## 🟨 Flash Card Questions (Memorizers)
 
@@ -222,6 +254,10 @@ Types:
 Because it uses primitive data types like int, char, double which are not objects.
 
 ---
+
+### What does it mean that Strings are immutable?
+**Answer:**
+Once a String object is created, it cannot be modified. Any operation that seems to modify a String creates a new String object.
 
 ### What is the static keyword?
 **Answer:**
