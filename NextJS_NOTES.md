@@ -61,4 +61,47 @@ React Server Components is a new architecture that was introduced by the React t
 
 ### Dynamic Routes.
 **Answer:**
-- Dynamic Routes are created by giving [PLACEHOLDER] as the folder name.
+Dynamic Routes are created by giving [PLACEHOLDER] as the folder name.
+
+---
+
+### Demo for obtaining a value through params in Dynamic Route.
+**Answer:**
+File structure:
+- Products
+  - [productId]
+    - page.tsx
+page.tsx:
+
+```tsx
+export default async function ProductDetails({
+    params,
+} : {
+    params: Promise<{productId : String}>
+}){
+    const productId = (await params).productId;
+    return <h1>The product Id is {productId}</h1>
+}
+```
+
+---
+
+### Catch all segments.
+**Answer:**
+Used to handle multiple urls as in /feature1/concept1/example1 and so on.
+```tsx
+export default async function Docs({ params }: { params: Promise<{ slug: string[] }> }) {
+    const {slug} = await params;
+    if(slug?.length === 2){
+        return <h1>Inside docs of feature :{slug[0]} with concept :{slug[1]}</h1>
+    }else if(slug?.length === 1){
+        return <h1>Inside docs of a unique feature number :{slug[0]}</h1>
+    }
+    return <h1>Docs Home Page</h1>
+}
+``` 
+However for this kind of structure, the output for /docs will be a error (404 Not found).
+![DOM](./assets/asset1.PNG)
+
+---
+
