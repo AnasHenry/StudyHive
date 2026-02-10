@@ -97,11 +97,14 @@ export default async function Docs({ params }: { params: Promise<{ slug: string[
     }else if(slug?.length === 1){
         return <h1>Inside docs of a unique feature number :{slug[0]}</h1>
     }
-    return <h1>Docs Home Page</h1>
+    return <h1>Docs Home Page</h1> //*Usage mentioned below
 }
 ``` 
-However for this kind of structure, the output for /docs will be a error (404 Not found).
+However for this kind of structure, the output for /docs will be a error (404 Not found). Since there exists no page.tsx under docs folder.\
 ![DOM](./assets/asset1.PNG)
+In order to handle that and display something instead of the *404 error* message, We can wrap the slug with an another square brackets ( [[..slug]] ). Thus the message in * gets printed in case if /docs is accessed.
+
+However this practice must be followed only at times where the UI is same for all the pages under /docs. If not creating a separate page.tsx under docs folder is recommended.
 
 ---
 
