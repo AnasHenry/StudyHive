@@ -100,7 +100,7 @@ export default async function Docs({ params }: { params: Promise<{ slug: string[
     return <h1>Docs Home Page</h1>
 }
 ``` 
-However for this kind of structure, the output for /docs will be a error (404 Not found).
+However for this kind of structure, the output for /docs will be a error (404 Not found).\
 ![DOM](./assets/asset1.PNG)
 
 ---
