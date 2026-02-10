@@ -45,3 +45,20 @@ React Server Components is a new architecture that was introduced by the React t
 ---
 
 ### Routing
+**Answer:**
+- Next.js has a file-system routing system.
+- URLs you can access in your browser are determined by how you organize your files and folders in your code.
+
+---
+
+### Routing Conventions
+**Answer:**
+- All routes must live inside the app folder
+- Route files must be named either page.js or page.tsx
+- Each folder represents a segment of the URL path
+
+---
+
+### Dynamic Routes.
+**Answer:**
+- Dynamic Routes are created by giving [PLACEHOLDER] as the folder name.
